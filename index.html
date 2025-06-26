@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mes Amis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://www.bing.com/images/search?q=une+image+de+fleur+qui+peut+rester+derri%C3%A8re+une+page+web+en+lien+d%27amiti%C3%A9&id=618BA8069A37C5F6072B1DC46CB183EB2E7B431F&FORM=IACFIR");
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            padding-top: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        .friend-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            width: 250px;
+        }
+
+        .friend-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .description {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Les JAGOOOOO</h1>
+
+    <div class="gallery">
+        <div class="friend-card">
+            <img src="mes_amis/WhatsApp Image 2025-06-21 à 20.04.02_e9934738.jpg" alt="Ami 1">
+            <button onclick="toggleDescription(this)">Afficher la description</button>
+            <p class="description">Lui, c'est Gill-christ BADJI. Il est à LA POSTE DU BÉNIN. Le JAGOOOOO !!!</p>
+
+        </div>
+
+        <div class="friend-card">
+            <img src="mes_amis/WhatsApp Image 2025-06-21 à 20.22.41_9d247bdc.jpg" alt="Ami 2">
+            <button onclick="toggleDescription(this)">Afficher la description</button>
+            <p class="description">Lui c'est Cyrus KONFO. Il est à l'Ecobank le JAGOOOOO!!!</p>
+        </div>
+
+        <div class="friend-card">
+            <img src="mes_amis/WhatsApp Image 2025-06-21 à 20.26.18_67706426.jpg" alt="Ami 3">
+            <button onclick="toggleDescription(this)">Afficher la description</button>
+            <p class="description">Lui c'est notre Coach Ricardo AMOUSSOU. Actuellement et depuis toujours, il est le
+                JAGOOOOO!!!</p>
+        </div>
+
+        <div class="friend-card">
+            <img src="mes_amis/WhatsApp Image 2025-06-21 à 20.26.19_537c3555.jpg" alt="Ami 4">
+            <button onclick="toggleDescription(this)">Afficher la description</button>
+            <p class="description">Lui c'est Mirco SOUNOUVOU. Je ne connais pas sa banque, mais il a de l'argent. Un
+                JAGOOOOO parmi tant d'autres.</p>
+        </div>
+
+        <div class="friend-card">
+            <img src="mes_amis/WhatsApp Image 2025-06-21 à 20.36.19_98589ee5.jpg" alt="Ami 5">
+            <button onclick="toggleDescription(this)">Afficher la description</button>
+            <p class="description">Le respo de la IT2 Newton AFFADONOUGBO. Actuellement "coulé" parce qu’il n'est pas
+                encore viré.</p>
+        </div>
+
+        <div class="friend-card">
+            <img src="mes_amis/WhatsApp Image 2025-06-21 à 21.00.45_c67bf427.jpg" alt="Ami 6">
+            <button onclick="toggleDescription(this)">Afficher la description</button>
+            <p class="description">Lui c'est Aremou MOUNIROU dit Aress : fan de football et supporter du Barça. Étudiant
+                à l'EPAC en 2ᵉ année d'Informatique et Télécommunication. Mon gars sûr !</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDescription(button) {
+            const description = button.nextElementSibling;
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+                button.textContent = "Cacher la description";
+            } else {
+                description.style.display = "none";
+                button.textContent = "Afficher la description";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
